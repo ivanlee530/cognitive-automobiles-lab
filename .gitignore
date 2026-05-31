@@ -1,0 +1,29 @@
+# macOS system files
+.DS_Store
+
+# ROS2 bag data
+*.mcap
+*.db3
+*.bag
+
+# Generated lane detection outputs
+Code/lane_detection_stage1/outputs/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# ROS / colcon generated folders
+build/
+install/
+log/
+
+# Course materials, not part of this GitHub repository
+0_Machine_vision/
+1_Automotive_vision/
+2_Decision_making/
+PPT/
+Tutorials - Slides/
+
+# Local bag metadata
+Code/metadata.yaml

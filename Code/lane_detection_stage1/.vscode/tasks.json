@@ -1,0 +1,21 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Stage 3: Batch Component Evaluation",
+      "type": "shell",
+      "command": "source /opt/ros/jazzy/setup.bash && python3 src/stage3_batch_component_evaluate.py",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Stage 3: Single Frame Component Debug",
+      "type": "shell",
+      "command": "source /opt/ros/jazzy/setup.bash && python3 src/stage3_component_extract.py",
+      "problemMatcher": []
+    }
+  ]
+}

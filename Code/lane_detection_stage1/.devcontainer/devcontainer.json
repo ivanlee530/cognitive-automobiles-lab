@@ -1,0 +1,26 @@
+{
+  "name": "kal-lane-detection-stage3",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "workspaceMount": "source=${localWorkspaceFolder}/../..,target=/workspace,type=bind,consistency=cached",
+  "workspaceFolder": "/workspace/Code/lane_detection_stage1",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-vscode.cpptools",
+        "ms-iot.vscode-ros"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/bin/python3",
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  },
+  "remoteEnv": {
+    "ROS_DISTRO": "jazzy"
+  },
+  "postCreateCommand": "bash -lc 'source /opt/ros/jazzy/setup.bash && python3 src/stage3_batch_component_evaluate.py --help'"
+}
